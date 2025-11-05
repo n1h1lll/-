@@ -17,8 +17,8 @@
 .header__links-list {
     display: flex;
     gap: 32px;
-    list-style: circle;
     line-height: 100%;
+    list-style: circle;
 }
 
 .header__links-list-item {
@@ -87,9 +87,9 @@
 
 .cover {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
     z-index: 1;
     background-image: url(../images/cover.jpg);
     background-position: center; /* центрирует изображение */
@@ -153,29 +153,113 @@
 
 .cover__description-text {
     position: relative;
+    z-index: 3;
+    margin-right: 77px;
+    margin-left: 32px;
+    color: white;
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
-    color: white;
-    z-index: 3;
-    margin-left: 32px;
     word-spacing: 18px;
-    margin-right: 77px;
 }
 
 .bet-button {
     position: relative;
-    background-color: transparent;
-    padding: 12px 32px 11px 31px;
-    border: 1px solid white;
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: white;
     z-index: 3;
     transition: 0.3s ease opacity;
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 12px 32px 11px 31px;
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 .bet-button:hover {
     opacity: 0.7;
+}
+
+.lots {
+    display: flex;
+    flex-direction: column;
+    margin: 179px 24px 146px;
+}
+
+.lots__heading {
+    margin-left: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 27px;
+}
+
+.lots__card-list-item {
+    position: relative;
+    flex-grow: 1;
+    z-index: 1;
+    width: 334px;
+    min-height: 563px;
+    list-style: none;
+}
+
+.card-link {
+    display: block;
+    z-index: 1;
+    height:100%;
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
+    height: 100%; /*ПРОВЕРИТЬ КАК ВЛИЯЕТ*/
+    color: white;
+    line-height: 1.2;
+}
+
+.card_type_film {
+    z-index: 1;
+    background-image: url(../images/card-lot-01.jpg);
+    background-position: -113px;
+    background-size: 171% 100%;
+    background-repeat: no-repeat;
+}
+
+.card_type_book {
+    z-index: 1;
+    background-image: url(../images/card-lot-02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card_type_picture {
+    z-index: 1;
+    background-image: url(../images/card-lot-03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card__title {
+    line-height: 1.2; /*по заданию 1.2, но только с 1.8 сходится с макетом*/
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.card__text {
+    font-size: 20px;
+    z-index: 3;
 }
