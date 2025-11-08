@@ -221,7 +221,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 48px 40px;
-    height: 100%; /*ПРОВЕРИТЬ КАК ВЛИЯЕТ*/
+    height: 100%;
     color: white;
     line-height: 1.2;
 }
@@ -249,17 +249,124 @@
 }
 
 .card__title {
-    line-height: 1.2; /*по заданию 1.2, но только с 1.8 сходится с макетом*/
+    z-index: 3;
     font-weight: 700;
     font-size: 22px;
+    line-height: 1.2; /*по заданию 1.2, но только с 1.8 сходится с макетом*/
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     text-transform: uppercase;
-    z-index: 3;
 }
 
 .card__text {
-    font-size: 20px;
     z-index: 3;
+    font-size: 20px;
+}
+
+.lots__look-more-link {
+    margin: 30px 0px 2px 40px;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.about {
+    display: grid;
+    grid-template-rows: 1fr ;
+    grid-template-columns: 334px auto; 
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.about__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 47px;
+    border-radius: 120px;
+    background-color: black;
+    width: 240px;
+    height: 240px;
+}
+
+.about__logo-image {
+    width: 148px;
+    height: 114px;
+}
+
+.about__title {
+    margin-top: 133px;
+    margin-bottom: 101px;
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.about__text {
+    grid-row: 2;
+    grid-column: 2;
+    margin-left: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.about__text:first-of-type {
+    margin-bottom: 26px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 178px 50px 91px;
+}
+
+.footer__contacts {
+    grid-column: 4;
+    justify-self: end;
+    width: 100%;
+    max-width: 240px;
+    font-size: 18px;
+}
+
+
+.footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+}
+
+.footer__menu-list-item {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.footer__menu-link {
+    text-decoration: none;
+}
+
+.footer__menu-link_active {
+    text-decoration: none;
+}
+
+.footer__social-list {
+    list-style: none;
+    display: flex;
+    gap: 48px;
+}
+
+.footer__social-list-item {
+    width: 48px;
+    height: 48px;
 }
